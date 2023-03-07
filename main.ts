@@ -1,22 +1,7 @@
-input.onButtonPressed(Button.A, function () {
-    basic.showString("A")
-    a += 1
-})
-input.onButtonPressed(Button.AB, function () {
-    basic.showString("T")
-    t += 1
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showString("B")
-    b += 1
-})
-input.onGesture(Gesture.Shake, function () {
-    basic.showString("A")
-    basic.showNumber(a)
-    basic.showString("b")
-    basic.showNumber(b)
-    basic.showString("t")
-    basic.showNumber(t)
+input.onGesture(Gesture.ScreenDown, function () {
+    let t = 0
+    let b = 0
+    let a = 0
     if (a > b && a > t) {
         basic.showString("A")
     } else {
@@ -92,9 +77,3 @@ input.onGesture(Gesture.Shake, function () {
         }
     }
 })
-let t = 0
-let b = 0
-let a = 0
-a = 0
-b = 0
-t = 0
